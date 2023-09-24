@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Unique key of the Deployment instance
+  name: petcommerce-deploy
+spec:
+  # 3 Pods should exist at all times.
+  replicas: 3
+  selector:
+    matchLabels:
+      app: petcommerce
+  template:
+    metadata:
+      labels:
+        # Apply this label to pods and default
+        # the Deployment label selector to this value
+        app: petcommerce
+    spec:
+      containers:
+      - name: petcommerce
+        # Run this image
+        image: shaikkhajaibrahim/workshop-petcommerce
+        ports:
+          - containerPort: 80
+        
+        
