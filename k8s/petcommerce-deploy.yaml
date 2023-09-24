@@ -20,7 +20,7 @@ spec:
       containers:
       - name: petcommerce
         # Run this image
-        image: shaikkhajaibrahim/workshop-petcommerce
+        image: shaikkhajaibrahim/nopcommerceaug23
         ports:
           - containerPort: 80
         
